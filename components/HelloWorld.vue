@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Hello World AAA</h2>
+    <h2>Hello World</h2>
     <p>{{ counts }}</p>
     <button @click="counts += 1">
       点击+1
@@ -8,13 +8,13 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from '@nuxtjs/composition-api'
 // your script setup
 const counts = ref(0)
 </script>
 
-<script>
+<script lang="ts">
 export default {
   name: 'HelloWorld'
 }
