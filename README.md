@@ -1,4 +1,4 @@
-# nuxt-demo2
+# Nuxt.js script setup demo
 
 ## Build Setup
 
@@ -21,4 +21,4 @@ $ yarn generate
 
 - [x] 添加 composition api
 - [x] 支持 script setup
-- [ ] 支持 script setup + TypeScript
+- [x] 支持 TypeScript
