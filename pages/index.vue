@@ -1,5 +1,8 @@
 <template>
-  <HelloWorld />
+  <div>
+    <HelloWorld />
+    <CountNumber :number="12" :multiple="20" />
+  </div>
 </template>
 
 <script lang="ts">
