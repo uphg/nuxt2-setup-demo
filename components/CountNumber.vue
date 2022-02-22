@@ -6,10 +6,11 @@
 </template>
 
 <script setup lang="ts">
+import { PropType } from '@nuxtjs/composition-api'
 
 defineProps({
   number: {
-    type: Number,
+    type: Number as PropType<number>,
     default: 0
   },
   multiple: {
@@ -17,4 +18,6 @@ defineProps({
     default: 0
   }
 })
+
+defineEmits(['2', '3'])
 </script>
