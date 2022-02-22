@@ -1,3 +1,5 @@
+import { resolve } from 'path'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -25,6 +27,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/svg-icon'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -54,5 +57,19 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend(config, { isDev }) {
+      // ..
+      const rule = config.module.rules.find(rule => rule.test.test('.svg'))
+      rule.exclude = [resolve(__dirname, 'assets/icons/svg')]
+      // Sets webpack's mode to development if `isDev` is true.
+      config.module.rules.push({
+        test: /\.svg$/, // 匹配.svg
+        include: [resolve(__dirname, 'assets/icons/svg')], // 将存放svg的目录加入到loader处理目录
+        use: [{ loader: 'svg-sprite-loader', options: { symbolId: 'icon-[name]' } }]
+      })
+      if (isDev) {
+        config.mode = 'development'
+      }
+    }
   }
 }

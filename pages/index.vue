@@ -1,5 +1,6 @@
 <template>
   <div>
+    <svg-icon name="dayu" />
     <HelloWorld />
     <CountNumber :number="12" :multiple="20" />
   </div>
