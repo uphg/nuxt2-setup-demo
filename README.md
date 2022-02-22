@@ -20,5 +20,7 @@ $ yarn generate
 ## todo
 
 - [x] 添加 composition api
-- [x] 支持 script setup
-- [x] 支持 TypeScript
+- [x] script setup
+- [x] TypeScript
+- [x] svg 自动化引入
+- [x] Element UI 按需引入
