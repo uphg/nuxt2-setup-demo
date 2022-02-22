@@ -27,6 +27,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/element-ui',
     '@/plugins/svg-icon'
   ],
 
@@ -70,6 +71,18 @@ export default {
       if (isDev) {
         config.mode = 'development'
       }
+    },
+    // see https://nuxtjs.org/docs/configuration-glossary/configuration-build/
+    babel: {
+      plugins: [
+        [
+          "component",
+          {
+            libraryName: "element-ui",
+            styleLibraryName: "theme-chalk"
+          }
+        ]
+      ]
     }
   }
 }
