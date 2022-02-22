@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build": "vue-tsc --noEmit --skipLibCheck && nuxt build",
     "start": "nuxt start",
-    "generate": "vue-tsc --noEmit --skipLibCheck && nuxt generate",
+    "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "lintfix": "yarn lint:js --fix"
