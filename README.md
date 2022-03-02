@@ -24,3 +24,18 @@ $ yarn generate
 - [x] TypeScript
 - [x] svg 自动化引入
 - [x] Element UI 按需引入
+
+## 报错问题
+
+如果提示 `Modules should be only specified once: unplugin-vue2-script-setup/nuxt` 可以删除 nuxt 中的以下配置
+
+```js
+// nuxt.config.js
+export default {
+  buildModules: [
+    ...
+    'unplugin-vue2-script-setup/nuxt'
+  ]
+}
+```
+
