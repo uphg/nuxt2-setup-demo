@@ -39,3 +39,12 @@ export default {
 }
 ```
 
+## 关于 `.nuxtignore`
+
+`.nuxtignore` 配置是惰性的，只有文件发生改变，它的配置才会生效
+
+示例：排除 pages 中 components 目录中所有的 .vue 文件
+
+```sh
+pages/**/components/*.vue
+```
