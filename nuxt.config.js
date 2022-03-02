@@ -38,8 +38,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     ['@nuxt/typescript-build', { typeCheck: false }],
-    '@nuxtjs/composition-api/module',
-    'unplugin-vue2-script-setup/nuxt'
+    '@nuxtjs/composition-api/module'
   ],
 
   scriptSetup: { /* options */ },
@@ -76,10 +75,10 @@ export default {
     babel: {
       plugins: [
         [
-          "component",
+          'component',
           {
-            libraryName: "element-ui",
-            styleLibraryName: "theme-chalk"
+            libraryName: 'element-ui',
+            styleLibraryName: 'theme-chalk'
           }
         ]
       ]
