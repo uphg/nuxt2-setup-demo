@@ -78,7 +78,7 @@ export default {
           'component',
           {
             libraryName: 'element-ui',
-            styleLibraryName: 'theme-chalk'
+            styleLibraryName: '~assets/element-ui'
           }
         ]
       ]
